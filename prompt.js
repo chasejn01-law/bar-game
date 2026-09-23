@@ -7,7 +7,7 @@ const promptWords = [
   {
     word: "Offer",
     definition:
-      "An objective manifestation of willingness to enter into an agreement by the offeror that creates a power of acceptance in the offeree. The terms of the offer must be sufficiently certain. At common law, the offer must contain all essential terms. Under the UCC, the only essential term is quantity."
+      "An objective manifestation of willingness to enter into an agreement by the offeror that creates a power of acceptance in the offeree. The terms of the offer must be sufficiently definite. At common law, the offer must contain all essential terms. Under the UCC, the only essential term is quantity."
   },
   {
     word: "Revocation",
@@ -27,7 +27,7 @@ const promptWords = [
   {
     word: "Part Performance",
     definition:
-      "An offer that invites performance as a reasonable method of acceptance (i.e., a unilateral contract) makes the offer irrevocable upon partial performance. Mere preparation is not enough to make the offer irrevocable."
+      "An offer that invites performance as a reasonable method of acceptance (i.e., a unilateral contract) makes the offer irrevocable upon partial performance. Mere preparation is not enough."
   },
   {
     word: "Promissory Estoppel",
@@ -67,12 +67,12 @@ const promptWords = [
   {
     word: "Mirror Image Rule",
     definition:
-      "At common law, for an acceptance to form a conract, the acceptance must be a mirror image of the offer. Any deviation from the terms (i.e., new or additional terms) is considered a counteroffer and no contract is created."
+      "At common law, for an acceptance to form a contract, the acceptance must be a mirror image of the offer. Any deviation from the terms (i.e., new or additional terms) is considered a counteroffer and no contract is created."
   },
   {
     word: "Battle of Forms",
     definition:
-      "When the terms of an offer and acceptance do not align under the UCC, it is considered a battle of forms. Where at least one party is not a merchant, the additional terms are treated as a mere proposal that must be separately accepted by the offeror to become part of the contract. Where both parties are merchants, a contract is created that includes the new or additional terms, unless: (1) the offeror rejects within a reasonable time, (2) the terms are a material alteration (i.e., causes surprise or hardship) or (3) the offer expressly required assent to the new terms."
+      "When the terms of an offer and acceptance do not align under the UCC, it is considered a battle of forms. Where at least one party is not a merchant, the additional terms are treated as a mere proposal that must be separately accepted by the offeror. Where both parties are merchants, a contract is created that includes the new or additional terms, unless: (1) the offeror rejects within a reasonable time, (2) the terms are a material alteration (i.e., causes surprise or hardship) or (3) the offer expressly required assent to the new terms."
   },
   {
     word: "Breaching Party's Remedy",
@@ -82,7 +82,7 @@ const promptWords = [
   {
     word: "Actionable Breach of Contract",
     definition:
-      "For a breach of contract to be actionable, it must be material breach rather than a minor breach. Material breach occurs when there is a failure to substantially perform, i.e., where the non-breaching party is denied the benefit of their bargain. Where breach is minor, the non-breaching party is entitled to a set off in price but cannot refuse to perform or otherwise treat the contract as breached."
+      "For a breach of contract to be actionable, it must be a material breach rather than a minor breach. Material breach occurs when there is a failure to substantially perform, i.e., where the non-breaching party is denied the benefit of their bargain. Where breach is minor, the non-breaching party is entitled to a set off in price but cannot refuse to perform or otherwise treat the contract as breached."
   },
   {
     word: "Substantial Performance",
