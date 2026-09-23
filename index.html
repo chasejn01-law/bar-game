@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Browser Game</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>Bar Game</h1>
+
+  <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+  <p id="timer">10:00</p>
+
+  <div id="gameOverOverlay" class="hidden">
+    <div id="gameOverBox">
+      <h2>Game Over</h2>
+      <button id="restartButton">Restart</button>
+    </div>
+  </div>
+
+    <div id="responseOverlay" class="hidden">
+        <div id="responseBox">
+            <h2>Enemy Hit!</h2>
+            <p>Type your response before continuing:</p>
+
+            <form id="responseForm">
+                <p>
+                  Time Left:
+                  <strong id="popupTimer">10:00</strong>
+                </p>
+                <p>
+                  Type this concept:
+                  <strong id="promptWord"></strong>
+                </p>
+
+               <div class="answer-input-row">
+                <textarea
+                  id="responseText"
+                  rows="6"
+                  placeholder="Type or speak your answer..."
+                  required
+                ></textarea>
+
+                <button
+                  id="micButton"
+                  type="button"
+                  class="mic-button"
+                  aria-label="Speak answer"
+                  title="Speak answer"
+                >
+                  🎤
+                </button>
+              </div>
+
+              <div id="answerFeedback" class="hidden"></div>
+
+              <button id="submitAnswerButton" type="submit">
+                Submit
+              </button>
+
+              <button
+                id="continueButton"
+                type="button"
+                class="hidden"
+              >
+                Continue
+              </button> 
+
+                
+            </form>
+        </div>
+    </div>
+
+  <script src="health.js"></script>
+  <script src="prompt.js"></script>
+  <script src="script.js"></script>
+  <script src="rival.js"></script>
+</body>
+</html>
