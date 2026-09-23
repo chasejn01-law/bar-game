@@ -37,7 +37,7 @@ const promptWords = [
   {
     word: "Acceptance",
     definition:
-      "An acceptance may arise by communication or performance. An express acceptance may be made by word of mouth or in writing. An acceptance can also be inferred by conduct, for example, if one receives goods and makes use of them."
+      "An acceptance is an objective manifestatoin by the offeree to be bound by the terms of the offer. An acceptance may arise by communication or performance. An express acceptance may be made by word of mouth or in writing. An acceptance can also be inferred by conduct, for example, if one receives goods and makes use of them."
   },
   {
     word: "Valid Acceptance Elements",
