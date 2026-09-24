@@ -97,7 +97,7 @@ const promptWords = [
   {
     word: "Expectation Damages",
     definition:
-      "Intended to pur the plaintiff in a position economically equivalent to the position that party would have been in if the contract had been fully performed. Expectation damages = loss in value + other loss (consequential and incidental damages) - cost avoided - loss avoided."
+      "Intended to put the plaintiff in a position economically equivalent to the position that party would have been in if the contract had been fully performed. Expectation damages = loss in value + other loss (consequential and incidental damages) - cost avoided - loss avoided."
   },
   {
     word: "Loss in Value",
