@@ -17,7 +17,7 @@ const promptWords = [
   {
     word: "Firm Offer Rule",
     definition:
-      "An offer is irrevocable if the offeror is a merchant, who gives an assurance that the offer will remain open, and the assurance is contained in a signed writing. Cannot remain open longer than three months without consideration."
+      "Under the UCC, an offer is irrevocable if the offeror is a merchant, who gives an assurance that the offer will remain open, and the assurance is contained in a signed writing. Cannot remain open longer than three months without consideration."
   },
   {
     word: "Option Contract",
@@ -62,7 +62,7 @@ const promptWords = [
   {
     word: "Mailbox Rule",
     definition:
-      "Unless the offer states otherwise, an acceptance that is mailed within the allotted response time is effective when dispatched (not upon receipt). Revocations are effective upon receipt. The mailbox rule does not apply when a rejection is sent before an acceptance. In those cases, whichever is received first controls."
+      "Unless the offer states otherwise, an acceptance that is mailed within the allotted response time is effective when dispatched (not upon receipt). Revocations are effective upon receipt. The mailbox rule does not apply when a rejection is sent before an acceptance. In those cases, whichever is received first controls. This rule does not apply to option contracts."
   },
   {
     word: "Mirror Image Rule",
