@@ -588,7 +588,7 @@ responseForm.addEventListener(
       if (hitRival) {
 
         // Defeat rival
-        rival.alive = false;
+        hitEnemy.alive = false;
 
         // Special reward
         rewardRivalDefeat();
@@ -765,13 +765,13 @@ function checkEnemyPlayerCollision() {
   // RIVAL
   // --------------------
 
-  if (
-    rival.alive &&
-    isColliding(player, rival)
-  ) {
-    if (!playerInvulnerable) {
-      damagePlayer();
-      knockPlayerBack(rival);
+  for (const rival of rivals) {
+    if (rival.alive && isColliding(player, rival)) {
+      if (!playerInvulnerable) {
+        damagePlayer();
+        knockPlayerBack(rival);
+      }
+      break;
     }
   }
 }
@@ -1124,7 +1124,7 @@ function openResponseBox(enemy) {
 
   hitEnemy = enemy;
 
-  hitRival = enemy === rival;
+  hitRival = rivals.includes(enemy);
 
   for (const key in keys) {
     keys[key] = false;
@@ -1272,9 +1272,10 @@ function updateProjectiles() {
     // RIVAL COLLISION
     // --------------------
 
-    if (rival.alive) {
+    for (const rival of rivals) {
+      if (!rival.alive) continue;
       const rivalHitBox =
-        getRivalHitBox();
+        getRivalHitBox(rival);
 
       if (
         isColliding(
@@ -1285,6 +1286,7 @@ function updateProjectiles() {
         openResponseBox(rival);
 
         hitSomething = true;
+        break;
       }
     }
 
@@ -1523,7 +1525,7 @@ function update() {
 
   updatePlayer();
   updateEnemies();
-  updateRival();
+  for (const rival of rivals) updateRival(rival);
 
   checkEnemyPlayerCollision();
 
@@ -2142,17 +2144,15 @@ function drawDepthSortedObjects() {
 
   // add rival
 
-  if (rival.alive) {
-  drawables.push({
-    type: "rival",
-
-    depth:
-      rival.y +
-      rival.height,
-
-    object: rival
-  });
-}
+  for (const rival of rivals) {
+    if (rival.alive) {
+      drawables.push({
+        type: "rival",
+        depth: rival.y + rival.height,
+        object: rival
+      });
+    }
+  }
 
   // Sort from top to bottom
   drawables.sort(function(a, b) {
@@ -2180,7 +2180,7 @@ function drawDepthSortedObjects() {
       drawEnemy(drawable.object);
     }
     if (drawable.type === "rival") {
-      drawRival();
+      drawRival(drawable.object);
     }
   }
 }
