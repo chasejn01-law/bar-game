@@ -527,3 +527,42 @@ canvas {
     transform: scale(1);
   }
 }
+
+/* --------------------
+   GAME STATS
+-------------------- */
+
+#gameStats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin: 16px 0;
+}
+
+#gameStats #timer,
+#gameStats #enemyCounter {
+  margin: 0;
+
+  min-width: 120px;
+
+  padding: 8px 18px;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  color: #fff3c4;
+
+  background: #1a202b;
+
+  border: 3px solid #72543a;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 0 #0b0f14,
+    inset 0 0 8px rgba(255, 255, 255, 0.05);
+}

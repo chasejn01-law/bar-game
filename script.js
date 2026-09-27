@@ -19,6 +19,13 @@ let hitRival = false;
 const timerDisplay =
   document.getElementById("timer");
 
+const enemyCounterDisplay =
+  document.getElementById("enemyCounter");
+
+let enemiesDefeated = 0;
+
+const TOTAL_ENEMIES = 20;
+
 const gameOverOverlay =
   document.getElementById("gameOverOverlay");
 
@@ -601,6 +608,10 @@ responseForm.addEventListener(
 
         if (enemyIndex !== -1) {
           enemies.splice(enemyIndex, 1);
+
+          // Update defeated-enemy counter
+          enemiesDefeated++;
+          updateEnemyCounter();
         }
 
         // Normal enemy reward
@@ -929,6 +940,15 @@ restartButton.addEventListener("click", function() {
 });
 
 updateTimerDisplay();
+
+// --------------------
+// UPDATE ENEMY COUNTER
+// --------------------
+
+function updateEnemyCounter() {
+  enemyCounterDisplay.textContent =
+    `Enemies: ${enemiesDefeated} / ${TOTAL_ENEMIES}`;
+}
 
 // --------------------
 // SPAWN ENEMIES
@@ -2206,7 +2226,7 @@ function draw() {
   drawHealth();
 }
 
-spawnEnemies(20);
+spawnEnemies(TOTAL_ENEMIES);
 
 // --------------------
 // GAME LOOP

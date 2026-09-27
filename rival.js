@@ -21,6 +21,7 @@ const rivalSpriteFrames = {
 };
 
 const rivals = [
+  // Rival 1
   {
     x: 1650,
     y: 1050,
@@ -34,9 +35,26 @@ const rivals = [
     moveDuration: 90,
     alive: true
   },
+
+  // Rival 2
   {
     x: 650,
     y: 1050,
+    width: 36,
+    height: 36,
+    speed: 1.35,
+    direction: "down",
+    walkFrame: 0,
+    animationTimer: 0,
+    moveTimer: 0,
+    moveDuration: 90,
+    alive: true
+  },
+
+  // Rival 3
+  {
+    x: 1050,
+    y: 600,
     width: 36,
     height: 36,
     speed: 1.35,
