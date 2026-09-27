@@ -77,7 +77,7 @@ const promptWords = [
   {
     word: "Anticipatory Repudiation",
     definition:
-      "Anticipatory repudiation is when a party clearly and unequivocally communicates he will not perform by the time contract performance is due. The non-breaching party may (1) suspend performance and treat the anticipatory repudidation as a material breach (and sue), or (2) wait a reasonable time for performance (and then sue). Note that a repudiating party can rescind the repudiation provided that the non-breaching party has not cancelled the contract or detrimentally relied on the repudiation."
+      "Anticipatory repudiation is when a party clearly and unequivocally communicates he will not perform by the time contract performance is due. The non-breaching party may (1) suspend performance and treat the anticipatory repudiation as a material breach (and sue), or (2) wait a reasonable time for performance (and then sue). Note that a repudiating party can rescind the repudiation provided that the nonbreaching party has not cancelled the contract or detrimentally relied on the repudiation."
   },
   {
     word: "Adequate Assurances",
@@ -97,7 +97,7 @@ const promptWords = [
   {
     word: "Merchant Memo Rule",
     definition:
-      "If, within a reasonable time, a writing, (1) in confirmation of the contract and (2) sufficient against the sender, is received, and the party recieving it has reason to know of its contents, it satisfies the requirements of the statute of frauds unless written notice of objection of its contents is giving within 10 days after it is received."
+      "If, within a reasonable time, a writing, (1) in confirmation of the contract and (2) sufficient against the sender, is received, and the party receiving it has reason to know of its contents, it satisfies the requirements of the statute of frauds unless written notice of objection of its contents is given within 10 days after it is received."
   },
   {
     word: "Installment Contract (UCC)",
