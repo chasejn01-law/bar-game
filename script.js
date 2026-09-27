@@ -24,7 +24,7 @@ const enemyCounterDisplay =
 
 let enemiesDefeated = 0;
 
-const TOTAL_ENEMIES = 20;
+const TOTAL_ENEMIES = 37;
 
 const gameOverOverlay =
   document.getElementById("gameOverOverlay");
@@ -32,7 +32,7 @@ const gameOverOverlay =
 const restartButton =
   document.getElementById("restartButton");
 
-const GAME_TIME = 10 * 60;
+const GAME_TIME = 15 * 60;
 
 const popupTimer =
   document.getElementById("popupTimer");
@@ -1153,8 +1153,7 @@ function openResponseBox(enemy) {
   const randomIndex =
     Math.floor(Math.random() * promptWords.length);
 
-  currentPrompt =
-    promptWords[randomIndex];
+  currentPrompt = getNextPrompt();
 
   promptWord.textContent =
     currentPrompt.word;

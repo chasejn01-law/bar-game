@@ -12,12 +12,12 @@ const promptWords = [
   {
     word: "Revocation",
     definition:
-      "The general rule is offers are freely revocable. Revocation can be direct or indirect. An indirect revocation occurs when the offeree acquires reliable information that the offeror has taken definite action inconsistent with the offer, which in turn automatically revokes the offer."
+      "The general rule is that offers are freely revocable. Revocation can be direct or indirect. An indirect revocation occurs when the offeree acquires reliable information that the offeror has taken definite action inconsistent with the offer, which in turn automatically revokes the offer."
   },
   {
     word: "Firm Offer Rule",
     definition:
-      "Under the UCC, an offer is irrevocable if the offeror is a merchant, who gives an assurance that the offer will remain open, and the assurance is contained in a signed writing. Cannot remain open longer than three months without consideration."
+      "Under the UCC, an offer is irrevocable if the offeror is a merchant, who gives an assurance that the offer will remain open, and the assurance is contained in a signed writing. The offer cannot remain open for longer than three months without consideration."
   },
   {
     word: "Option Contract",
@@ -35,14 +35,24 @@ const promptWords = [
       "When an offeree detrimentally relies on an offer in some reasonable manner, that offer may be irrevocable."
   },
   {
-    word: "Acceptance",
+    word: "Acceptance (Think Sale of Goods)",
     definition:
-      "An acceptance is an objective manifestatoin by the offeree to be bound by the terms of the offer. An acceptance may arise by communication or performance. An express acceptance may be made by word of mouth or in writing. An acceptance can also be inferred by conduct, for example, if one receives goods and makes use of them."
+      "An acceptance is an objective manifestation by the offeree to be bound by the terms of the offer. An acceptance may arise by communication or performance. An express acceptance may be made by word of mouth or in writing. An acceptance can also be inferred by conduct, for example, if one receives goods and makes use of them."
   },
   {
     word: "Valid Acceptance Elements",
     definition:
-      "(1) Must be dispatched within a reasonable time and while offer is still in force, (2) must be unconditional, and (3) must be communicated to the offeror."
+      "(1) Must be dispatched within a reasonable time and while the offer is still in force, (2) must be unconditional, and (3) must be communicated to the offeror."
+  },
+  {
+    word: "Mirror Image Rule",
+    definition:
+      "At common law, for an acceptance to form a contract, the acceptance must be a mirror image of the offer. Any deviation from the terms of the offer (i.e., new or additional terms) is considered a counteroffer and no contract is created."
+  },
+  {
+    word: "Battle of Forms",
+    definition:
+      "When the terms of an offer and acceptance do not align under the UCC, it is considered a battle of forms. Where at least one party is not a merchant, the additional terms are treated as a mere proposal that must be separately accepted by the offeror. Where both parties are merchants, a contract is created that includes the new or additional terms, unless: (1) the offeror rejects within a reasonable time, (2) the terms are a material alteration (i.e., causes surprise or hardship) or (3) the offer expressly required assent to the new terms."
   },
   {
     word: "Non-Conforming Acceptance",
@@ -50,9 +60,14 @@ const promptWords = [
       "Acceptance by performance creates a contract. If the performance deviates from the terms of the offer, a non-conforming acceptance creates a contract and a simultaneous breach. A non-conforming acceptance accompanied by a written explanation creates a counteroffer."
   },
   {
+    word: "Mailbox Rule",
+    definition:
+      "Unless the offer states otherwise, an acceptance that is mailed within the allotted response time is effective when dispatched (not upon receipt). Revocations are effective upon receipt. The mailbox rule does not apply when a rejection is sent before an acceptance. In those cases, whichever is received first controls. This rule does not apply to option contracts."
+  },
+  {
     word: "Consideration",
     definition:
-      "Valuable consideration is evidenced by a bargained-for change in the legal position between the parties. Most courts conclude that consideration exists if there is a detriment to the promisee, irrespective of the benefit to the promisor. A promise for a promise (i.e., a bilateral contract) is sufficient consideration"
+      "Valuable consideration is evidenced by a bargained-for change in the legal position between the parties. Most courts conclude that consideration exists if there is a detriment to the promisee, irrespective of the benefit to the promisor. A promise in exchange for a promise (i.e., a bilateral contract) is sufficient consideration."
   },
   {
     word: "Pre-Existing Duty",
@@ -60,19 +75,69 @@ const promptWords = [
       "A promise to perform a pre-existing duty does not qualify as consideration because the promisor is already bound to perform."
   },
   {
-    word: "Mailbox Rule",
+    word: "Anticipatory Repudiation",
     definition:
-      "Unless the offer states otherwise, an acceptance that is mailed within the allotted response time is effective when dispatched (not upon receipt). Revocations are effective upon receipt. The mailbox rule does not apply when a rejection is sent before an acceptance. In those cases, whichever is received first controls. This rule does not apply to option contracts."
+      "Anticipatory repudiation is when a party clearly and unequivocally communicates he will not perform by the time contract performance is due. The non-breaching party may (1) suspend performance and treat the anticipatory repudidation as a material breach (and sue), or (2) wait a reasonable time for performance (and then sue). Note that a repudiating party can rescind the repudiation provided that the non-breaching party has not cancelled the contract or detrimentally relied on the repudiation."
   },
   {
-    word: "Mirror Image Rule",
+    word: "Adequate Assurances",
     definition:
-      "At common law, for an acceptance to form a contract, the acceptance must be a mirror image of the offer. Any deviation from the terms (i.e., new or additional terms) is considered a counteroffer and no contract is created."
+      "Where one party to a contract develops a reasonable belief that the other party may not perform, the party developing the insecurity may demand adequate assurances that performance will occur. Failure to provide adequate assurances within a reasonable time (30 days) may be regarded as breach of contract, excusing further performance from the party demanding assurances."
   },
   {
-    word: "Battle of Forms",
+    word: "Statute of Frauds",
     definition:
-      "When the terms of an offer and acceptance do not align under the UCC, it is considered a battle of forms. Where at least one party is not a merchant, the additional terms are treated as a mere proposal that must be separately accepted by the offeror. Where both parties are merchants, a contract is created that includes the new or additional terms, unless: (1) the offeror rejects within a reasonable time, (2) the terms are a material alteration (i.e., causes surprise or hardship) or (3) the offer expressly required assent to the new terms."
+      "Generally, a contract that falls within the statute of frauds is unenforceable unless evidenced by a writing that must: (1) be signed by the party to be charged and (2) contain the essential elements of the deal. The statute of frauds applies to contracts regarding: marriage, a year or longer, land sales, executor of estates, goods ($500 or more) and suretyship."
+  },
+  {
+    word: "Exceptions to the Statute of Frauds",
+    definition:
+      "Merchant memo rule, specially manufactured goods (goods not saleable in the ordinary course of business become binding when manufacturer begins production or procurement of necessary material), performance (goods delivered and accepted) and admission."
+  },
+  {
+    word: "Merchant Memo Rule",
+    definition:
+      "If, within a reasonable time, a writing, (1) in confirmation of the contract and (2) sufficient against the sender, is received, and the party recieving it has reason to know of its contents, it satisfies the requirements of the statute of frauds unless written notice of objection of its contents is giving within 10 days after it is received."
+  },
+  {
+    word: "Installment Contract (UCC)",
+    definition:
+      "Contract that sells the same goods repeatedly for the same price. A single agreement for successive deliveries. Installment provisions should be clearly written to include specific details regarding how payment and deliveries will work."
+  },
+  {
+    word: "Divisible Contract (Common Law)",
+    definition:
+      "A contract where the parties' performances are divided into matching pairs of duties to perform that the parties consider equal and can be enforced separately. Requires the same service to be repeated more than once for the same price."
+  },
+  {
+    word: "Parol Evidence",
+    definition:
+      "Parol evidence is any prior or contemporaneous agreement not contained within the contract. The parol evidence rule generally prevents a party to a written contract from presenting extrinsic evidence of a prior or contemporaneous agreement that contradicts or varies the terms of the contract as written. Evidence may be admitted for the purpose of interpreting or clarifying an ambiguity in the agreement."
+  },
+  {
+    word: "Parol Evidence Rule",
+    definition:
+      "The different purposes of the parol evidence rules are as follows: (1) terms that contradict the contract are never allowed (2) supplementing an agreement with consistent additional terms is allowed when the contract is partially integrated, and (3) terms meant to explain, clarify or define an ambiguous contract are always allowed (even if the contract is fully integrated)."
+  },
+  {
+    word: "Third-Party Issues",
+    definition:
+      "Third-Party Beneficiary: where parties to a contract intend that performance by one party benefits a third-party (who is not a party to the contract). Two kinds of third-party beneficiaries: (1) Intnded beneficiary: (a) explicitly promised certain benefits on a contract, but they are not party to the contract itself (b) beneficiary has rights under the contract and can sue to enforce, and (2) Incidental beneficiary: (a) a person or legal entity that is not a party to a contract and becomes an unintended third-party beneficiary to the contract and (b) has no rights under the contract and can recover nothing."
+  },
+  {
+    word: "Assignment",
+    definition:
+      "An assignment of rights transfers benefits to a third party but not the obligations. Assignee can enforce the contract. Assignor loses the right to the benefit but not the duty to perform (unless also delegation)."
+  },
+  {
+    word: "Delegation",
+    definition:
+      "Delegation is the transfer of duties under a contract. Delegation is generally acceptable as long as: (1) the contract does not prohibt it, and (2) the other party does not have some special interest in having a specified individual perform. The original promisor (obligor) is usually still liable. The new obligee assumes the duty and thus becomes liable to the original promisee. Some duties cannot be delegated: personal skill of obligor, special trust in obligor, will cause material change in peformance, or contract expressly prohibits."
+  },
+  {
+    word: "Novation",
+    definition:
+      "Novation is an agreement by the original parties that replaces (complete substitution) a party with another, with the consent of all parties involved. A novation discharges the original contract (original contract is void). The party being replaced gives up their rights against the other original party. A novation relieves the original obligated party from liability. The new contract binds the new party ot the original terms."
   },
   {
     word: "Breaching Party's Remedy",
@@ -82,7 +147,7 @@ const promptWords = [
   {
     word: "Actionable Breach of Contract",
     definition:
-      "For a breach of contract to be actionable, it must be a material breach rather than a minor breach. Material breach occurs when there is a failure to substantially perform, i.e., where the non-breaching party is denied the benefit of their bargain. Where breach is minor, the non-breaching party is entitled to a set off in price but cannot refuse to perform or otherwise treat the contract as breached."
+      "For a breach of contract to be actionable, it must be a material breach rather than a minor breach. Material breach occurs when there is a failure to substantially perform, i.e., where the nonbreaching party is denied the benefit of their bargain. Where breach is minor, the nonbreaching party is entitled to a set off in price but cannot refuse to perform or otherwise treat the contract as breached."
   },
   {
     word: "Substantial Performance",
@@ -92,7 +157,7 @@ const promptWords = [
   {
     word: "Perfect Tender Rule",
     definition:
-      "Single delivery contracts under the UCC require perfect performance. If goods or tender of delivery fail in any respect to conform to the contract, the buyer has the right to: (1) accept the goods, (2) reject the entire shipement or (3) accept part and reject part."
+      "Single delivery contracts under the UCC require perfect performance. If goods or tender of delivery fail in any respect to conform to the contract, the buyer has the right to: (1) accept the goods, (2) reject the entire shipment, or (3) accept part and reject part."
   },
   {
     word: "Expectation Damages",
@@ -107,12 +172,12 @@ const promptWords = [
   {
     word: "Lost Volume Seller Rule",
     definition:
-      "Applies when a seller has an unlimited supply of goods and makes profit per item. Although the seller can resell the goods at the same price as the original contract price, they lost the opportunity to sell them in the first instance when the buyer breached. The seller need only show that they could have supplied both the breaching purchaser and resale purchaser with the goods. The measure of lost price is the list price minus the cost to the manufacturer."
+      "Applies when a seller has an unlimited supply of goods and makes profit per item. Although the seller can resell the goods at the same price as the original contract price, they lost the opportunity to sell them in the first instance when the buyer breached. The seller need only show that they could have supplied both the breaching purchaser and resale purchaser with the goods. The measure of lost profit is the list price minus the cost to the manufacturer."
   },
   {
     word: "Restitution",
     definition:
-      "Seeks to restore to a party the benefit conferred on the other party. When a plaintiff unjustly enriches the defendant, restitution generally allows plaintiff to recover the benefit conferred on the defendant (rather than the harm suffered by the plaintiff)"
+      "Seeks to restore to a party the benefit conferred on the other party. When a plaintiff unjustly enriches the defendant, restitution generally allows the plaintiff to recover the benefit conferred on the defendant (rather than the harm suffered by the plaintiff)"
   },
   {
     word: "Reliance Damages",
@@ -125,6 +190,63 @@ const promptWords = [
       "Where the court compels the defendant to perform. Available where there is no adequate remedy of law and money damages will not resolve the problem. Used as a remedy in real property contracts and contracts for unique goods."
   }
 ];
+
+// ---------------------------------
+// PROMPT ROTATION SYSTEM
+// Each prompt appears twice per cycle
+// ---------------------------------
+
+let promptPool = [];
+
+function shufflePrompts(array) {
+  const shuffled = [...array];
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [shuffled[i], shuffled[j]] =
+      [shuffled[j], shuffled[i]];
+  }
+
+  return shuffled;
+}
+
+function initializePromptPool() {
+  // Round 1: every prompt once
+  const firstRound = shufflePrompts(promptWords);
+
+  // Round 2: every prompt once again
+  let secondRound = shufflePrompts(promptWords);
+
+  // Prevent the last prompt of Round 1
+  // from being the first prompt of Round 2
+  if (
+    firstRound.length > 1 &&
+    secondRound.length > 1 &&
+    firstRound[firstRound.length - 1].word === secondRound[0].word
+  ) {
+    [secondRound[0], secondRound[1]] =
+      [secondRound[1], secondRound[0]];
+  }
+
+  promptPool = [
+    ...firstRound,
+    ...secondRound
+  ];
+}
+
+function getNextPrompt() {
+  // If all prompts have been used twice,
+  // start a new cycle.
+  if (promptPool.length === 0) {
+    initializePromptPool();
+  }
+
+  return promptPool.shift();
+}
+
+// Create the initial randomized pool
+initializePromptPool();
 
 // ====================
 // SPEECH RECOGNITION
