@@ -117,12 +117,12 @@ const promptWords = [
   {
     word: "Parol Evidence Rule",
     definition:
-      "The different purposes of the parol evidence rules are as follows: (1) terms that contradict the contract are never allowed (2) supplementing an agreement with consistent additional terms is allowed when the contract is partially integrated, and (3) terms meant to explain, clarify or define an ambiguous contract are always allowed (even if the contract is fully integrated)."
+      "The different purposes of the parol evidence rules are as follows: (1) terms that contradict the contract are never allowed, (2) supplementing an agreement with consistent additional terms is allowed when the contract is partially integrated, and (3) terms meant to explain, clarify, or define an ambiguous contract are always allowed (even if the contract is fully integrated)."
   },
   {
     word: "Third-Party Issues",
     definition:
-      "Third-Party Beneficiary: where parties to a contract intend that performance by one party benefits a third-party (who is not a party to the contract). Two kinds of third-party beneficiaries: (1) Intnded beneficiary: (a) explicitly promised certain benefits on a contract, but they are not party to the contract itself (b) beneficiary has rights under the contract and can sue to enforce, and (2) Incidental beneficiary: (a) a person or legal entity that is not a party to a contract and becomes an unintended third-party beneficiary to the contract and (b) has no rights under the contract and can recover nothing."
+      "Where parties to a contract intend that performance by one party benefits a third-party (who is not a party to the contract). Two kinds of third-party beneficiaries: (1) Intended beneficiary: (a) explicitly promised certain benefits on a contract, but they are not party to the contract itself, (b) beneficiary has rights under the contract and can sue to enforce, and (2) Incidental beneficiary: (a) a person or legal entity that is not a party to a contract and becomes an unintended third-party beneficiary to the contract and (b) has no rights under the contract and can recover nothing."
   },
   {
     word: "Assignment",
@@ -132,12 +132,12 @@ const promptWords = [
   {
     word: "Delegation",
     definition:
-      "Delegation is the transfer of duties under a contract. Delegation is generally acceptable as long as: (1) the contract does not prohibt it, and (2) the other party does not have some special interest in having a specified individual perform. The original promisor (obligor) is usually still liable. The new obligee assumes the duty and thus becomes liable to the original promisee. Some duties cannot be delegated: personal skill of obligor, special trust in obligor, will cause material change in peformance, or contract expressly prohibits."
+      "Delegation is the transfer of duties under a contract. Delegation is generally acceptable as long as: (1) the contract does not prohibit it, and (2) the other party does not have some special interest in having a specified individual perform. The original promisor (obligor) is usually still liable. The new obligee assumes the duty and thus becomes liable to the original promisee. Some duties cannot be delegated: personal skill of obligor, special trust in obligor, will cause material change in performance, or contract expressly prohibits."
   },
   {
     word: "Novation",
     definition:
-      "Novation is an agreement by the original parties that replaces (complete substitution) a party with another, with the consent of all parties involved. A novation discharges the original contract (original contract is void). The party being replaced gives up their rights against the other original party. A novation relieves the original obligated party from liability. The new contract binds the new party ot the original terms."
+      "Novation is an agreement by the original parties that replaces (complete substitution) a party with another, with the consent of all parties involved. A novation discharges the original contract (original contract is void). The party being replaced gives up their rights against the other original party. A novation relieves the original obligated party from liability. The new contract binds the new party to the original terms."
   },
   {
     word: "Breaching Party's Remedy",
