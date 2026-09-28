@@ -5,7 +5,7 @@
 const heartImage = new Image();
 heartImage.src = "assets/heart.png";
 
-let playerHealth = 2;
+let playerHealth = 3;
 
 // Player cannot be damaged repeatedly during this period
 let playerInvulnerable = false;

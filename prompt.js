@@ -35,7 +35,7 @@ const promptWords = [
       "When an offeree detrimentally relies on an offer in some reasonable manner, that offer may be irrevocable."
   },
   {
-    word: "Acceptance (Think Sale of Goods)",
+    word: "Acceptance",
     definition:
       "An acceptance is an objective manifestation by the offeree to be bound by the terms of the offer. An acceptance may arise by communication or performance. An express acceptance may be made by word of mouth or in writing. An acceptance can also be inferred by conduct, for example, if one receives goods and makes use of them."
   },
@@ -55,7 +55,7 @@ const promptWords = [
       "When the terms of an offer and acceptance do not align under the UCC, it is considered a battle of forms. Where at least one party is not a merchant, the additional terms are treated as a mere proposal that must be separately accepted by the offeror. Where both parties are merchants, a contract is created that includes the new or additional terms, unless: (1) the offeror rejects within a reasonable time, (2) the terms are a material alteration (i.e., causes surprise or hardship) or (3) the offer expressly required assent to the new terms."
   },
   {
-    word: "Non-Conforming Acceptance",
+    word: "Non-Conforming Acceptance (Think Sale of Goods)",
     definition:
       "Acceptance by performance creates a contract. If the performance deviates from the terms of the offer, a non-conforming acceptance creates a contract and a simultaneous breach. A non-conforming acceptance accompanied by a written explanation creates a counteroffer."
   },
@@ -77,67 +77,80 @@ const promptWords = [
   {
     word: "Anticipatory Repudiation",
     definition:
-      "Anticipatory repudiation is when a party clearly and unequivocally communicates he will not perform by the time contract performance is due. The non-breaching party may (1) suspend performance and treat the anticipatory repudiation as a material breach (and sue), or (2) wait a reasonable time for performance (and then sue). Note that a repudiating party can rescind the repudiation provided that the nonbreaching party has not cancelled the contract or detrimentally relied on the repudiation."
+      "Anticipatory repudiation is when a party clearly and unequivocally communicates he will not perform by the time contract performance is due. The non-breaching party may (1) suspend performance and treat the anticipatory repudiation as a material breach (and sue), or (2) wait a reasonable time for performance (and then sue). Note that a repudiating party can rescind the repudiation provided that the nonbreaching party has not cancelled the contract or detrimentally relied on the repudiation.",
+    enemyType: "weak"
   },
   {
     word: "Adequate Assurances",
     definition:
-      "Where one party to a contract develops a reasonable belief that the other party may not perform, the party developing the insecurity may demand adequate assurances that performance will occur. Failure to provide adequate assurances within a reasonable time (30 days) may be regarded as breach of contract, excusing further performance from the party demanding assurances."
+      "Where one party to a contract develops a reasonable belief that the other party may not perform, the party developing the insecurity may demand adequate assurances that performance will occur. Failure to provide adequate assurances within a reasonable time (30 days) may be regarded as breach of contract, excusing further performance from the party demanding assurances.",
+    enemyType: "weak"
   },
   {
     word: "Statute of Frauds",
     definition:
-      "Generally, a contract that falls within the statute of frauds is unenforceable unless evidenced by a writing that must: (1) be signed by the party to be charged and (2) contain the essential elements of the deal. The statute of frauds applies to contracts regarding: marriage, a year or longer, land sales, executor of estates, goods ($500 or more) and suretyship."
+      "Generally, a contract that falls within the statute of frauds is unenforceable unless evidenced by a writing that must: (1) be signed by the party to be charged and (2) contain the essential elements of the deal. The statute of frauds applies to contracts regarding: marriage, a year or longer, land sales, executor of estates, goods ($500 or more) and suretyship.",
+    enemyType: "weak"
   },
   {
     word: "Exceptions to the Statute of Frauds",
     definition:
-      "Merchant memo rule, specially manufactured goods (goods not saleable in the ordinary course of business become binding when manufacturer begins production or procurement of necessary material), performance (goods delivered and accepted) and admission."
+      "Merchant memo rule, specially manufactured goods (goods not saleable in the ordinary course of business become binding when manufacturer begins production or procurement of necessary material), performance (goods delivered and accepted) and admission.",
+    enemyType: "weak"
   },
   {
     word: "Merchant Memo Rule",
     definition:
-      "If, within a reasonable time, a writing, (1) in confirmation of the contract and (2) sufficient against the sender, is received, and the party receiving it has reason to know of its contents, it satisfies the requirements of the statute of frauds unless written notice of objection of its contents is given within 10 days after it is received."
+      "If, within a reasonable time, a writing, (1) in confirmation of the contract and (2) sufficient against the sender, is received, and the party receiving it has reason to know of its contents, it satisfies the requirements of the statute of frauds unless written notice of objection of its contents is given within 10 days after it is received.",
+    enemyType: "weak"
   },
   {
     word: "Installment Contract (UCC)",
     definition:
-      "Contract that sells the same goods repeatedly for the same price. A single agreement for successive deliveries. Installment provisions should be clearly written to include specific details regarding how payment and deliveries will work."
+      "Contract that sells the same goods repeatedly for the same price. A single agreement for successive deliveries. Installment provisions should be clearly written to include specific details regarding how payment and deliveries will work.",
+    enemyType: "weak"
   },
   {
     word: "Divisible Contract (Common Law)",
     definition:
-      "A contract where the parties' performances are divided into matching pairs of duties to perform that the parties consider equal and can be enforced separately. Requires the same service to be repeated more than once for the same price."
+      "A contract where the parties' performances are divided into matching pairs of duties to perform that the parties consider equal and can be enforced separately. Requires the same service to be repeated more than once for the same price.",
+    enemyType: "weak"
   },
   {
     word: "Parol Evidence",
     definition:
-      "Parol evidence is any prior or contemporaneous agreement not contained within the contract. The parol evidence rule generally prevents a party to a written contract from presenting extrinsic evidence of a prior or contemporaneous agreement that contradicts or varies the terms of the contract as written. Evidence may be admitted for the purpose of interpreting or clarifying an ambiguity in the agreement."
+      "Parol evidence is any prior or contemporaneous agreement not contained within the contract. The parol evidence rule generally prevents a party to a written contract from presenting extrinsic evidence of a prior or contemporaneous agreement that contradicts or varies the terms of the contract as written. Evidence may be admitted for the purpose of interpreting or clarifying an ambiguity in the agreement.",
+    enemyType: "weak"
   },
   {
     word: "Parol Evidence Rule",
     definition:
-      "The different purposes of the parol evidence rules are as follows: (1) terms that contradict the contract are never allowed, (2) supplementing an agreement with consistent additional terms is allowed when the contract is partially integrated, and (3) terms meant to explain, clarify, or define an ambiguous contract are always allowed (even if the contract is fully integrated)."
+      "The different purposes of the parol evidence rule are as follows: (1) terms that contradict the contract are never allowed, (2) supplementing an agreement with consistent additional terms is allowed when the contract is partially integrated, and (3) terms meant to explain, clarify, or define an ambiguous contract are always allowed (even if the contract is fully integrated).",
+    enemyType: "weak"
   },
   {
     word: "Third-Party Issues",
     definition:
-      "Where parties to a contract intend that performance by one party benefits a third-party (who is not a party to the contract). Two kinds of third-party beneficiaries: (1) Intended beneficiary: (a) explicitly promised certain benefits on a contract, but they are not party to the contract itself, (b) beneficiary has rights under the contract and can sue to enforce, and (2) Incidental beneficiary: (a) a person or legal entity that is not a party to a contract and becomes an unintended third-party beneficiary to the contract and (b) has no rights under the contract and can recover nothing."
+      "Where parties to a contract intend that performance by one party benefits a third-party (who is not a party to the contract). Two kinds of third-party beneficiaries: (1) Intended beneficiary: (a) explicitly promised certain benefits on a contract, but they are not party to the contract itself, (b) beneficiary has rights under the contract and can sue to enforce, and (2) Incidental beneficiary: (a) a person or legal entity that is not a party to a contract and becomes an unintended third-party beneficiary to the contract and (b) has no rights under the contract and can recover nothing.",
+    enemyType: "weak"
   },
   {
     word: "Assignment",
     definition:
-      "An assignment of rights transfers benefits to a third party but not the obligations. Assignee can enforce the contract. Assignor loses the right to the benefit but not the duty to perform (unless also delegation)."
+      "An assignment of rights transfers benefits to a third party but not the obligations. Assignee can enforce the contract. Assignor loses the right to the benefit but not the duty to perform (unless also delegation).",
+    enemyType: "weak"
   },
   {
     word: "Delegation",
     definition:
-      "Delegation is the transfer of duties under a contract. Delegation is generally acceptable as long as: (1) the contract does not prohibit it, and (2) the other party does not have some special interest in having a specified individual perform. The original promisor (obligor) is usually still liable. The new obligee assumes the duty and thus becomes liable to the original promisee. Some duties cannot be delegated: personal skill of obligor, special trust in obligor, will cause material change in performance, or contract expressly prohibits."
+      "Delegation is the transfer of duties under a contract. Delegation is generally acceptable as long as: (1) the contract does not prohibit it, and (2) the other party does not have some special interest in having a specified individual perform. The original promisor (obligor) is usually still liable. The new obligee assumes the duty and thus becomes liable to the original promisee. Some duties cannot be delegated: personal skill of obligor, special trust in obligor, will cause material change in performance, or contract expressly prohibits.",
+    enemyType: "weak"
   },
   {
     word: "Novation",
     definition:
-      "Novation is an agreement by the original parties that replaces (complete substitution) a party with another, with the consent of all parties involved. A novation discharges the original contract (original contract is void). The party being replaced gives up their rights against the other original party. A novation relieves the original obligated party from liability. The new contract binds the new party to the original terms."
+      "Novation is an agreement by the original parties that replaces (complete substitution) a party with another, with the consent of all parties involved. A novation discharges the original contract (original contract is void). The party being replaced gives up their rights against the other original party. A novation relieves the original obligated party from liability. The new contract binds the new party to the original terms.",
+    enemyType: "weak"
   },
   {
     word: "Breaching Party's Remedy",

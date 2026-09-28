@@ -88,6 +88,28 @@ const enemySpriteFrames = {
   ]
 };
 
+const weakEnemySprite = new Image();
+weakEnemySprite.src = "assets/weak-enemy-sprite-sheet.png";
+
+const weakEnemySpriteFrames = {
+  down: [
+    { x: 90, y: 60, width: 340, height: 310 },
+    { x: 602, y: 60, width: 340, height: 310 }
+  ],
+  left: [
+    { x: 90, y: 425, width: 340, height: 325 },
+    { x: 602, y: 425, width: 340, height: 325 }
+  ],
+  right: [
+    { x: 90, y: 790, width: 340, height: 325 },
+    { x: 602, y: 790, width: 340, height: 325 }
+  ],
+  up: [
+    { x: 90, y: 1160, width: 340, height: 320 },
+    { x: 602, y: 1160, width: 340, height: 320 }
+  ]
+};
+
 const waterImage = new Image();
 waterImage.src = "assets/water.png";
 
@@ -164,8 +186,8 @@ const continueButton =
 // --------------------
 
 const world = {
-  width: 2000,
-  height: 1400
+  width: 2400,
+  height: 1700
 };
 
 // --------------------
@@ -1010,6 +1032,12 @@ function spawnEnemies(count) {
     };
 
     if (isSpawnAreaClear(enemy)) {
+      const assignedPrompt = getNextPrompt();
+
+      enemy.prompt = assignedPrompt;
+      enemy.enemyType =
+        assignedPrompt.enemyType || "normal";
+
       chooseRandomEnemyDirection(enemy);
 
       enemies.push(enemy);
@@ -1150,10 +1178,11 @@ function openResponseBox(enemy) {
     keys[key] = false;
   }
 
-  const randomIndex =
-    Math.floor(Math.random() * promptWords.length);
-
-  currentPrompt = getNextPrompt();
+  if (hitRival) {
+    currentPrompt = getNextPrompt();
+  } else {
+    currentPrompt = enemy.prompt;
+  }
 
   promptWord.textContent =
     currentPrompt.word;
@@ -1561,31 +1590,38 @@ function drawEnemy(enemy) {
   const y = enemy.y - camera.y;
 
   // --------------------
-  // SHADOW
+  // SELECT ENEMY TYPE
   // --------------------
 
-  ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
+  const isWeakEnemy =
+    enemy.enemyType === "weak";
 
-  ctx.fillRect(
-    x + 5,
-    y + enemy.height - 4,
-    enemy.width - 10,
-    4
-  );
+  const sprite =
+    isWeakEnemy
+      ? weakEnemySprite
+      : enemySprite;
+
+  const spriteFrames =
+    isWeakEnemy
+      ? weakEnemySpriteFrames
+      : enemySpriteFrames;
 
   // --------------------
   // SELECT SPRITE FRAME
   // --------------------
 
   const frame =
-    enemySpriteFrames[enemy.direction][enemy.walkFrame];
+    spriteFrames[enemy.direction][enemy.walkFrame];
 
   // --------------------
   // DRAW SIZE
   // --------------------
 
-  const drawWidth = 44;
-  const drawHeight = 56;
+  const drawWidth =
+    isWeakEnemy ? 50 : 44;
+
+  const drawHeight =
+    isWeakEnemy ? 58 : 56;
 
   // Center sprite over enemy collision box
   const drawX =
@@ -1604,15 +1640,13 @@ function drawEnemy(enemy) {
   // --------------------
 
   ctx.drawImage(
-    enemySprite,
+    sprite,
 
-    // Exact source rectangle
     frame.x,
     frame.y,
     frame.width,
     frame.height,
 
-    // Position and size in game
     drawX,
     drawY,
     drawWidth,
@@ -1878,13 +1912,15 @@ function drawWater() {
         x < water.width;
         x += tileSize
       ) {
-        ctx.drawImage(
-          waterImage,
-          screenX + x,
-          screenY + y,
-          tileSize,
-          tileSize
-        );
+        if (waterImage.complete && waterImage.naturalWidth > 0) {
+          ctx.drawImage(
+            waterImage,
+            screenX + x,
+            screenY + y,
+            tileSize,
+            tileSize
+          );
+        }
       }
     }
 
@@ -2226,6 +2262,7 @@ function draw() {
 }
 
 spawnEnemies(TOTAL_ENEMIES);
+updateCamera();
 
 // --------------------
 // GAME LOOP
@@ -2237,4 +2274,6 @@ function gameLoop() {
 
   requestAnimationFrame(gameLoop);
 }
+
+gameLoop();
 

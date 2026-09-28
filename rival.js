@@ -173,5 +173,3 @@ function getRivalHitBox(rival) {
     height: rival.height + 20
   };
 }
-
-gameLoop();
